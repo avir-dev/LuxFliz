@@ -1,0 +1,442 @@
+/* Resetowanie margynów i paddingów oraz ustawienie box-sizing dla wszystkich elementów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stylizowanie ciała strony */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Stylizacja nagłówka */
+.header {
+    background-color: #090909; /* Jasny żółty kolor */
+    color: #cccccc; /* Ciemniejszy kolor tekstu dla kontrastu */
+    padding: 20px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Wyrównanie wertykalne */
+    justify-content: space-between; /* Rozmieszczenie elementów na końcach kontenera */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.logo h1 {
+    font-size: 28px;
+    font-weight: bold;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact-buttons {
+    /* Brak dodatkowych stylów */
+}
+
+.contact-buttons .btn,
+.hero .btn {
+    font-weight: bold;
+    border: none;
+    width: 220px; /* Zwiększona szerokość przycisku */
+    height: 60px; /* Zwiększona wysokość przycisku */
+    cursor: pointer;
+    border-radius: 5px;
+    color: #cccccc; /* Jasny kolor tekstu */
+    background-color: #090909; /* Ciemne tło */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    line-height: 60px; /* Wyrównanie tekstu w pionie */
+    text-decoration: none; /* Usunięcie podkreślenia */
+    display: inline-block; /* Zapewnienie, że link działa jak przycisk */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Animacje dla zmiany koloru i efektu cienia */
+}
+
+.contact-buttons .btn:hover,
+.hero .btn:hover {
+    background-color: white; /* Tło zmienia się na białe */
+    color: #161616; /* Kolor tekstu zmienia się na ciemniejszy */
+    transform: scale(1.05); /* Powiększenie przycisku */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Dodanie cienia */
+}
+
+.hero {
+    background-image: url('hero-bg.png');
+    background-size: cover; /* Tło pokrywa cały obszar, utrzymując proporcje */
+    background-position: center center; /* Wyśrodkowanie tła */
+    background-repeat: no-repeat; /* Zapobiega powtarzaniu tła */
+    padding: 40px 0; /* Zmniejszone wypełnienie dla mniejszego banera */
+    color: white;
+    text-align: center;
+    height: 50vh; /* Zmniejszona wysokość sekcji */
+    min-height: 250px; /* Minimalna wysokość sekcji */
+    display: flex; /* Flexbox do centrowania zawartości */
+    align-items: center; /* Wyrównanie w pionie */
+    justify-content: center; /* Wyrównanie w poziomie */
+    flex-direction: column; /* Układ kolumnowy */
+    overflow: hidden; /* Ukrycie nadmiaru obrazka */
+}
+
+/* Obramowanie wokół tekstu w banerze */
+.hero .container {
+    border: 3px solid white; /* Białe obramowanie wokół tekstu */
+    padding: 20px 30px; /* Dodanie paddingu wokół tekstu */
+    background-color: rgba(0, 0, 0, 0.7); /* Półprzezroczyste, ciemne tło pod tekstem */
+    border-radius: 10px; /* Zaokrąglenie rogów obramowania */
+    display: inline-block; /* Tekst w obramowaniu na środku */
+    max-width: 80%; /* Ograniczenie szerokości ramki */
+    text-align: center; /* Wyśrodkowanie tekstu w ramce */
+}
+
+
+
+
+
+/* Stylizacja sekcji usług */
+.services {
+    background-color: #f5f5f5; /* Jasny kolor tła */
+    padding: 60px 0;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1b365d; /* Ciemniejszy kolor tekstu */
+    font-size: 28px;
+}
+
+.service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Odstęp między elementami siatki */
+}
+
+.service-item {
+    width: 30%;
+    text-align: center;
+    background-color: white; /* Tło elementu */
+    border-radius: 8px; /* Zaokrąglenie rogów */
+    padding: 15px; /* Padding dla elementu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Cień dla lepszej wizualizacji */
+    transition: box-shadow 0.3s; /* Animacja cienia przy najechaniu */
+}
+
+.service-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Większy cień przy najechaniu */
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px; /* Zaokrąglenie rogów obrazków */
+}
+
+.service-item h3,
+.service-item p,
+.service-item a {
+    text-decoration: none; /* Usunięcie podkreślenia */
+    color: inherit; /* Zachowanie koloru tekstu */
+}
+
+.service-item h3 {
+    font-size: 20px;
+    color: #1b365d; /* Ciemniejszy kolor tekstu */
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #333; /* Ciemniejszy kolor tekstu */
+}
+
+.service-item a:hover {
+    text-decoration: none; /* Usunięcie podkreślenia przy najechaniu */
+}
+
+/* Stylizacja sekcji szczegółów usługi */
+.service-detail {
+    padding: 60px 0;
+    background-color: #f5f5f5; /* Tło sekcji */
+}
+
+.service-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Odstęp między tekstem a obrazkiem */
+}
+
+.service-description {
+    flex: 1; /* Pozwala tekstowi wypełniać dostępne miejsce */
+    max-width: 50%; /* Maksymalna szerokość dla opisu */
+}
+
+.service-image {
+    flex: 1; /* Pozwala obrazkowi wypełniać dostępne miejsce */
+    max-width: 50%; /* Maksymalna szerokość dla obrazka */
+}
+
+.service-image img {
+    width: 100%; /* Obrazek dopasowuje się do kontenera */
+    height: auto; /* Zachowanie proporcji obrazka */
+    border-radius: 8px; /* Zaokrąglenie rogów obrazka */
+}
+
+/* Stylizacja linków */
+a {
+    text-decoration: none; /* Usunięcie podkreślenia dla wszystkich linków */
+    color: inherit; /* Użycie dziedziczonego koloru */
+}
+
+/* Stylizacja paska przewijania */
+::-webkit-scrollbar {
+    width: 12px; /* Szerokość scrollbara */
+}
+
+/* Tło całego paska przewijania */
+::-webkit-scrollbar-track {
+    background-color: #f5f5f5; /* Jasne tło, dopasowane do reszty strony */
+    border-radius: 10px; /* Zaokrąglenie krawędzi */
+}
+
+/* Sam pasek przewijania */
+::-webkit-scrollbar-thumb {
+    background-color: #A6A6A6; /* Jasny żółty kolor paska przewijania */
+    border-radius: 10px; /* Zaokrąglenie paska */
+    border: 2px solid #f5f5f5; /* Dodatkowy efekt, tworzący obramowanie wokół paska */
+}
+
+/* Zmiana koloru paska podczas przewijania */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #595959; /* Nieco ciemniejszy żółty kolor przy najechaniu */
+}
+
+/* Stylizacja dla elementów wewnętrznych paska, takich jak przyciski */
+::-webkit-scrollbar-button {
+    display: none; /* Ukrywanie przycisków na końcach scrollbara */
+}
+
+.gallery {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1b365d;
+    font-size: 32px;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.gallery-image {
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.gallery-image:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Odstęp od nagłówka */
+}
+
+.gallery-link {
+    font-size: 18px; /* Zmniejszony rozmiar czcionki */
+    color: #A6A6A6; /* Kolor tekstu */
+    text-decoration: none; /* Usunięcie podkreślenia */
+    padding: 10px 20px; /* Zmniejszony padding */
+    background-color: #262626; /* Tło napisu */
+    border-radius: 20px; /* Zaokrąglenie rogów */
+    font-weight: bold; /* Pogrubienie tekstu */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+    display: inline-block; /* Wyśrodkowanie linku */
+}
+
+.gallery-link:hover {
+    background-color: #262626; /* Ciemniejszy odcień tła przy najechaniu */
+    color: #A6A6A6; /* Kolor tekstu przy najechaniu */
+    transform: scale(1.05); /* Powiększenie napisu przy najechaniu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Dodanie cienia */
+}
+
+/* Stylizacja sekcji kontaktowej */
+.contact-info {
+    background-color: #ffffff; /* Białe tło */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+    color: #1b365d;
+    font-size: 28px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #1b365d;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Stylizacja sekcji dodatkowych informacji */
+.additional-info {
+    background-color: #f5f5f5; /* Jasnoszare tło */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.additional-info h2 {
+    margin-bottom: 20px;
+    color: #1b365d;
+    font-size: 28px;
+}
+
+.additional-info p {
+    font-size: 18px;
+}
+
+/* Stylizacja kafelków w sekcji usług */
+.service-item {
+    flex: 1 1 calc(33.333% - 40px); /* Trzy kolumny, z marginesami */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Cień wokół kafelka */
+    border-radius: 8px; /* Zaokrąglenie rogów kafelka */
+    overflow: hidden; /* Ukrycie nadmiaru */
+    background: white; /* Tło kafelka */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animacje przy najechaniu */
+}
+
+.service-item a {
+    text-decoration: none; /* Usunięcie podkreślenia linku */
+    color: inherit; /* Dziedziczenie koloru tekstu */
+    display: block; /* Blokowy wyświetlacz, aby zająć cały dostępny obszar */
+    height: 100%; /* Wysokość 100% kontenera */
+}
+
+.service-item img {
+    width: 100%; /* Dopasowanie szerokości obrazka do kontenera */
+    height: auto; /* Zachowanie proporcji obrazka */
+}
+
+.service-item h3 {
+    font-size: 20px;
+    margin: 10px 15px;
+}
+
+.service-item p {
+    font-size: 16px;
+    margin: 0 15px 15px;
+}
+
+.service-item:hover {
+    transform: translateY(-5px); /* Podniesienie kafelka */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Większy cień przy najechaniu */
+}
+
+@media (max-width: 768px) {
+    .service-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .service-item img {
+        width: 80%;
+        height: auto;
+    }
+
+/* Stylizacja dla sekcji .hero */
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .contact-buttons .btn:nth-child(1) {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-item {
+        width: 100%;
+    }
+
+    .service-item h3 {
+        font-size: 18px;
+    }
+
+    .service-item p {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 60px 0;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 250px;
+        height: auto;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .contact-buttons .btn,
+    .hero .btn {
+        width: 80%;
+        height: 50px;
+    }
+}
